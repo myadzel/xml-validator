@@ -19,7 +19,7 @@ function checkXML(xml_value, attr_value, entities) {
 		
 		if (null !== el.firstChild) {
 			if (el.firstChild.nodeName == 'parsererror') {
-				return 0; //WebKit, xml (new builds)
+				return 0; //WebKit, xml (new builds since 535.X, probably)
 			}
 			
 			if (el.firstChild.toString() == '[object HTMLElement]') {
