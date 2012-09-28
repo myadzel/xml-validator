@@ -18,6 +18,10 @@ function checkXML(xml_value, attr_value, entities) {
 		}
 		
 		if (null !== el.firstChild) {
+			if (el.firstChild.nodeName == 'parsererror') {
+				return 0; //WebKit, xml (new builds)
+			}
+			
 			if (el.firstChild.toString() == '[object HTMLElement]') {
 				return 0; //WebKit, xml
 			}
@@ -46,8 +50,4 @@ function checkXML(xml_value, attr_value, entities) {
 	}
 	
 	return 1;
-}
-
-function checkXMLAttribute(attr_value, entities) {
-	return checkXML('', attr_value, entities);
 }
