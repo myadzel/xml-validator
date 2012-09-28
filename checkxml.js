@@ -8,7 +8,7 @@ function checkXML(xml_value, attr_value, entities) {
 		parser = new DOMParser();
 		
 		try {
-			el = oParser.parseFromString(doc, 'text/xml').documentElement;
+			el = parser.parseFromString(doc, 'text/xml').documentElement;
 		} catch (e) {
 			return 0; //Opera, see also bug at https://bugzilla.mozilla.org/show_bug.cgi?id=45566
 		}
