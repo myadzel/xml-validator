@@ -1,0 +1,3 @@
+JavaScript XML validator that uses DOMParser/Microsoft.XMLDOM.
+
+First version was written in September 2008, see (in Russian) http://www.myadzel.ru/marginal/xml-validator/ for details.
